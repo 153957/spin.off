@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block current_events %}active{% endblock %}
+{% block title %}{{ block.super }} : Events{% endblock %}
+
+{% block style %}
+    .content li {
+        background: no-repeat left 6px  url({% static 'images/list_item.png' %});
+        padding-left: 20px;
+        padding-bottom: 8px;}
+{% endblock %}
+
+{% block body %}
+    <h1>Vorige optredens</h1>
+
+    <h3>Archeon</h3>
+
+    <ul>
+        <li><a href="https://www.archeon.nl/" target="_blank">MidWinter Fair</a> in 2016, 2015, 2013, 2012, 2011, 2010, 2009, 2008</li>
+        <li><a href="https://www.archeon.nl/" target="_blank">MidZomer Fair</a> in 2010, 2009</li>
+        <li><a href="https://www.archeon.nl/nl/archeon-in-de-winter/programma.html" target="_blank">Vier de Winter</a> in de winters van 2009 tot en met 2012</li>
+        <li><a href="https://www.archeon.nl" target="_blank">IJsbaan</a> opening op 2010-10-30</li>
+    </ul>
+
+    <h3>Evenement</h3>
+
+    <ul>
+        <li>Harvest Winter Fair in 2012</li>
+    </ul>
+
+    <h3>Feesten</h3>
+
+    <ul>
+        <li>Trouw feest op 2014-05-17</li>
+        <li>Trouwerij op 2011-11-11</li>
+        <li>5 Jarig bestaan <a href="http://www.hollandcasino.nl/venlo/" target="_blank">Holland Casino (Venlo)</a> op 2011-03-11</li>
+        <li>Verjaardag op 2010-12-11</li>
+        <li title="Reactie: Op onze bruiloft heeft deze groep een fantastisch optreden verzorgd. Het was zeer afwisselend en erg spectaculair. Ze waren het hoogtepunt van het feest. Kinderen vinden het werkelijk prachtig, iedereen heeft er ontzettend van genoten. Het contact en het vooroverleg verliep allemaal heel prettig, wij konden onze wensen kenbaar maken en eigenlijk was niets een probleem! Ook over de veiligheid was goed nagedacht. Het terein was afgezet, en het vuur kwam niet te dicht bij. Al met al een echte aanrader!">
+            Trouwerij op 2009-06-03
+        </li>
+        <li>Trouw feest op 2009-06-21</li>
+    </ul>
+{% endblock %}

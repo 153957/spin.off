@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block current_index %}active{% endblock %}
+
+{% block body %}
+    <div align="center">
+        <a href="{% url 'dutch.html' %}">
+            <img class='collageImg' alt='spin.off' src="{% static 'images/welcome_flower.jpg' %}" />
+        </a>
+    </div>
+{% endblock %}

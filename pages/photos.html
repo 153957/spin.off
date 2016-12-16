@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block current_photos %}active{% endblock %}
+{% block title %}{{ block.super }} : Photos{% endblock %}
+
+{% block style %}
+.photo_album img {
+    width: 49%;
+}
+{% endblock %}
+
+{% block body %}
+<div class="photo_album">
+    <img src="{% static 'images_photos/spinoff_02.jpg' %}">
+    <img src="{% static 'images_photos/spinoff_03.jpg' %}">
+    <img src="{% static 'images_photos/spinoff_04.jpg' %}">
+    <img src="{% static 'images_photos/spinoff_05.jpg' %}">
+    <img src="{% static 'images_photos/spinoff_06.jpg' %}">
+    <img src="{% static 'images_photos/spinoff_07.jpg' %}">
+    <img src="{% static 'images_photos/spinoff_08.jpg' %}">
+    <img src="{% static 'images_photos/spinoff_09.jpg' %}">
+    <img src="{% static 'images_photos/spinoff_10.jpg' %}">
+    <img src="{% static 'images_photos/spinoff_11.jpg' %}">
+</div>
+{% endblock %}

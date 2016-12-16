@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}spin.off{% endblock %}</title>
+        <link rel="shortcut icon" href="{% static '/static/images_favicon/favicon.ico' %}">
+        <link rel="stylesheet" href="{% static '/static/css/main.css' %}">
+        <style>
+            {% block style %}
+            {% endblock %}
+        </style>
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <div id="container">
+            <div id="pageHeader">
+                <h1>spin.off</h1>
+                <h2>{% block page_name %}{% endblock %}</h2>
+            </div>
+
+            <div id="contentContainer">
+                <div class="content">
+                    {% block body %}
+                    {% endblock %}
+                </div>
+            </div>
+
+            <div id="sidebarContainer">
+                <div id="top"></div>
+                <div id="navcontainer">
+                    <ul>
+                    <li><a class="{% block current_index %}{% endblock %}"
+                           href="{% url '/index.html' %}">Welcome to spin.off</a></li>
+                    <li><a class="{% block current_dutch %}{% endblock %}"
+                           href="{% url '/dutch.html' %}">Dutch</a></li>
+                    <li><a class="{% block current_english %}{% endblock %}"
+                           href="{% url '/english.html' %}">English</a></li>
+                    <li><a class="{% block current_events %}{% endblock %}"
+                           href="{% url '/events.html' %}">Events</a></li>
+                    <li><a class="{% block current_photos %}{% endblock %}"
+                           href="{% url '/photos.html' %}">Photos</a></li>
+                    <li><a class="{% block current_video %}{% endblock %}"
+                           href="{% url '/video.html' %}">Videos</a></li></ul>
+                </div>
+                <div id="bottom"></div>
+            </div>
+
+            <div class="clearer"></div>
+
+            <div id="footer">
+                <p>
+                    © 2008 spin.off, Arne de Laat. <a href="#" class="mail">Contact Us</a>
+                </p>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var _hup0 = "mailt",
+                _hup1 = "o:spi",
+                _hup2 = "n.off",
+                _hup3 = ".fire",
+                _hup4 = "shows",
+                _hup5 = "@gmai",
+                _hup6 = "l.com",
+                _hup = _hup0 + _hup1 + _hup2 + _hup3 + _hup4 + _hup5 + _hup6;
+
+            mailElements = document.querySelectorAll('a.mail');
+            for (var i = 0; i < mailElements.length; i++) {
+                mailElements[i].href = _hup;
+            }
+
+            var sc_project = 6449414,
+                sc_invisible = 1,
+                sc_security = "92b087bb",
+                sc_client_storage = "disabled";
+        </script>
+        <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+    </body>
+</html>
