@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block current_dutch %}active{% endblock %}
+{% block title %}{{ block.super }} : 404{% endblock %}
+
+{% block body %}
+    <p>
+        De gezochte pagina kon nergens gevonden worden!<br>
+        Waarschijnlijk is die in vlammen opgegaan..<br>
+        Kijk verder op de site voor bijvoorbeeld de foto's en filmpjes.
+    </p>
+
+    <p><a href="#" class="mail">Klik hier</a> om ons te mailen om ons te informeren van deze fout.</p>
+
+    <p><img src="{% static 'images/404.jpg' %}"></p>
+{% endblock %}
