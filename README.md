@@ -1,10 +1,8 @@
 spin.off
 ========
 
-[![GPLv3](http://img.shields.io/badge/license-GPLv3-blue.png)]
-(https://github.com/153957/spin.off/blob/master/LICENSE)
-[![Travis Status](http://img.shields.io/travis/153957/spin.off/master.png)]
-(https://travis-ci.org/153957/spin.off)
+[![GPLv3](http://img.shields.io/badge/license-GPLv3-blue.png)](https://github.com/153957/spin.off/blob/master/LICENSE)
+[![Travis Status](http://img.shields.io/travis/153957/spin.off/master.png)](https://travis-ci.org/153957/spin.off)
 
 This is the website for the
 [spin.off](http://www.spinoff.me).
