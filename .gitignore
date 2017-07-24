@@ -5,3 +5,7 @@ Icon?
 # Cactus
 *.pyc
 .build/
+
+# Node
+node_modules/
+.tmp/

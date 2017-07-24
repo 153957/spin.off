@@ -1,14 +1,23 @@
 language: python
 python:
-  - "2.7"
+  - "3.5"
 
 sudo: false
 
+addons:
+  apt:
+    packages:
+      - oracle-java8-set-default
+
 install:
-  - pip install cactus
-  - wget https://raw.githubusercontent.com/mozilla/html5-lint/master/html5check.py
+  - pip install -r requirements.txt
+  - pip install html5validator
+  - nvm install 6.10.3
+  - nvm use 6.10.3
+  - npm install -g yarn
+  - yarn install
 
 script:
   - cactus build
-  - CHECK=$(for file in .build/*.html; do python html5check.py -geh $file; done;)
-  - if [[ ! -z $(echo "$CHECK" | grep -vE 'iframe') ]]; then echo "$CHECK"; exit 1; fi;
+  - yarn run stylelint
+  - html5validator --root .build --show-warnings --ignore 'index_'

@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "postcss-cli": "^4.0.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-each": "^0.10.0",
+    "stylelint": "^7.10.1",
+    "stylelint-config-concentric-order": "^2.0.1",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "scripts": {
+    "postcss": "postcss static/css/*.css --dir .build/static/css/ --config postcss.config.js",
+    "postcss-test": "postcss static/css/*.css --dir .tmp/static/css/ --config postcss.config.js --env test",
+    "stylelint": "rm -r .tmp; yarn run postcss-test && stylelint .tmp/static/css/*.css"
+  }
+}
