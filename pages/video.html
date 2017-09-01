@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block head %}
-    <link rel="stylesheet" href="http://arne.delaat.net/style/tipTip.css" />
+    <link rel="stylesheet" href="http://arne.delaat.net/static/css/tipTip.css" />
     <link rel="stylesheet" href="http://arne.delaat.net/static/css/video.css" />
     <link rel="stylesheet" href="http://arne.delaat.net/static/css/controls.css" />
     <link rel="stylesheet" href="http://arne.delaat.net/static/css/vendor/font-awesome.css">
@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="http://arne.delaat.net/static/css/thumbs/D90.css" />
     <link rel="stylesheet" href="http://arne.delaat.net/static/css/thumbs/D700.css" />
     <link rel="stylesheet" href="http://arne.delaat.net/static/css/thumbs/S60.css" />
-    <script type="text/javascript" src="http://arne.delaat.net/script/jquery.min.js"></script>
-    <script type="text/javascript" src="http://arne.delaat.net/script/jquery.tipTip.min.js"></script>
+    <script type="text/javascript" src="http://arne.delaat.net/static/js/vendor/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="http://arne.delaat.net/static/js/vendor/jquery.tipTip.min.js"></script>
     <script type="text/javascript" src="http://arne.delaat.net/static/js/video.js"></script>
 {% endblock %}
 
@@ -29,7 +29,7 @@
     <p>
         Here are several recordings of previous performances.<br>
         Click a thumbnail to load a movie.</p>
-    <ul id="thumbnails" style="background:none;">
+    <ul id="thumbnails">
              <li class="thu" id="MidWinter_Fair_111211" style="background:url('http://arne.delaat.net/Movies/thumbs/MidWinter_Fair_111211.jpg');">
         </li><li class="thu d80" id="D80_110311_1">
         </li><li class="thu" id="Winter_Archeon_High_Speed_101226" style="background:url('http://arne.delaat.net/Movies/thumbs/Winter_Archeon_High_Speed_101226.jpg');">
@@ -39,17 +39,9 @@
         </li>
     </ul>
 
-    <div class="quicktime" id="movie" style="background-color: #EDEDD3; height: 370px;">
-        <img id="poster" style="margin:40px 0px;" class="showing" data-id="D80_081214_1" src="{% static 'images/movie_poster.jpg' %}" alt="A frame from one of the movies, click to play.">
-        <video id="player" height="0" width="0">
-            <p>
-                Your browser doesn't support HTML5, upgrade to one that does:
-                    <a class="sup" id="sf" href="http://www.apple.com/safari/" title="Safari 4+">
-                </a><a class="sup" id="ch" href="http://www.google.com/chrome" title="Google Chrome 5+">
-                </a><a class="sup" id="ff" href="http://www.firefox.com/" title="Firefox 3.5+">
-                </a><a class="sup" id="op" href="http://www.opera.com/" title="Opera 10.60+"></a><br />
-                Or use your current browser, but then you need Quicktime: <a class="sup" id="qt" href="http://www.apple.com/quicktime/download/" title="Quicktime 7+"></a>
-            </p>
-        </video>
+    <div class="quicktime" id="movie" style="height: 340px;">
+        <img id="poster" class="showing" data-id="D80_081214_1"
+             src="{% static 'images/movie_poster.jpg' %}" alt="Click to play.">
+        <video id="player"></video>
     </div>
 {% endblock %}
