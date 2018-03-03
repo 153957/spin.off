@@ -4,8 +4,7 @@ spin.off
 [![GPLv3](http://img.shields.io/badge/license-GPLv3-blue.png)](https://github.com/153957/spin.off/blob/master/LICENSE)
 [![Travis Status](http://img.shields.io/travis/153957/spin.off/master.png)](https://travis-ci.org/153957/spin.off)
 
-This is the website for the
-[spin.off](http://www.spinoff.me).
+This is the source of the archived website for spin.off.
 
 
 Installing cactus
@@ -30,14 +29,3 @@ and run:
 You can then point your browser to http://127.0.0.1:8000 to view the
 local version. If you make any changes to the code this should be
 reflected almost immediently in the local website.
-
-
-Synchronize
------------
-
-To update the live server use these commands:
-
-    cd [path to repository]
-    rm -rf .build
-    cactus build
-    rsync -avz .build/ [username]@[server address]:[path to web root]
